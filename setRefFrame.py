@@ -1,14 +1,14 @@
 import nuke
-import nukescripts
 
 
 def changeFrame():
+
     toFrameList = ['Tracker4', 'CornerPin2D', 'FrameHold', 'Roto', 'Transform']
    
     selNode = nuke.selectedNodes()
 
     if len (selNode) <> 1:
-        nuke.message('Select something!')
+        nuke.message('Select one node!')
 
     else:
         selNode = nuke.selectedNode()
@@ -31,4 +31,4 @@ def changeFrame():
 #Add a menu and assign a shortcut
 toolbar = nuke.menu('Nodes')
 cqnTools = toolbar.addMenu('CQNTools', 'Modify.png')
-cqnTools.addCommand('Change reference frame', 'setRefFrame.changeFrame()', 'crtl + shift + alt + f', icon='TimeOffset.png')
+cqnTools.addCommand('Change reference frame', 'setRefFrame.changeFrame()', 'crtl + shift + alt + f', icon = 'TimeOffset.png')
