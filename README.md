@@ -1,7 +1,8 @@
 # setRefFrame
 
-It's a simple tool to speed up the work. Select any node with a reference_frame knob (like Tracker, FrameHold) and press alt + shift + ctrl + f.
+It's a simple tool to speed up the work. Select one or more nodes with a reference frame knob (like Tracker, FrameHold) and press alt + shift + ctrl + f.
 It will take the current frame and put it as a reference frame.
+It works with my Baked Tool Kit too.
 
 Created by Luciano Cequinel (www.cequinavfx.com)
 To report bugs or suggestions lucianocequinel@gmail.com
