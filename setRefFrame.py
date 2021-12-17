@@ -1,5 +1,5 @@
 # created by Luciano Cequinel
-# version 2.0
+# version 2.0.0
 # realease date 12/16/2021
 
 
@@ -7,7 +7,7 @@ import nuke
 
 def changeFrame():
 
-    supportedNodes = ['Tracker4', 'CornerPin2D', 'FrameHold', 'Roto', 'Transform']
+    supportedNodes = ['Tracker4', 'FrameHold', 'Roto', 'Transform', 'CornerPin2D']
    
     selNode = nuke.selectedNodes()
 
