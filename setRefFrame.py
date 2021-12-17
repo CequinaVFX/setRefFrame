@@ -1,9 +1,13 @@
-import nuke
+# created by Luciano Cequinel
+# version 2.0
+# realease date 12/16/2021
 
+
+import nuke
 
 def changeFrame():
 
-    toFrameList = ['Tracker4', 'CornerPin2D', 'FrameHold', 'Roto', 'Transform']
+    supportedNodes = ['Tracker4', 'CornerPin2D', 'FrameHold', 'Roto', 'Transform']
    
     selNode = nuke.selectedNodes()
 
@@ -12,20 +16,23 @@ def changeFrame():
 
     else:
         for node in selNode:
-            if node.Class() in toFrameList:
+            if node.Class() in supportedNodes:
 
-                for k in selNode.knobs():
-        
-                    if k == 'reference_frame': # Tracker
-                        selNode['reference_frame'].setValue(nuke.frame())
-                        print ('%s.%s new value: %s' % (selNode.name(), k, (nuke.frame())))
-        
-                    elif k == 'first_frame': #FrameHold
-                        selNode['first_frame'].setValue(nuke.frame())
-                        print ('%s.%s new value: %s' % (selNode.name(), k, (nuke.frame())))
+                if node.knob('reference_frame'):
+                    node['reference_frame'].setValue(nuke.frame())
+                    print ('%s.reference_frame new value: %s' % (node.name(), (nuke.frame())))
 
-                    elif k == 'ref_frame': #Custom Transform, Roto, CornerPin
-                        selNode['ref_frame'].setValue(nuke.frame())
+                elif node.knob('first_frame'):
+                    node['first_frame'].setValue(nuke.frame())
+                    print ('%s.first_frame new value: %s' % (node.name(), (nuke.frame())))
+
+                elif node.knob('ref_frame'):
+                    node['ref_frame'].setValue(nuke.frame())
+                    print ('%s.ref_frame new value: %s' % (node.name(), (nuke.frame())))
+
+
+            else:
+                print ("%s doesn't have a valid knob:" % (node.name()))
 
 
 
