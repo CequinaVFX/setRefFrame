@@ -4,7 +4,7 @@ It's a simple tool to speed up the work. Select one or more nodes with a referen
 It will take the current frame and put it as a reference frame.
 It works with my Baked Tool Kit too.
 
-Created by Luciano Cequinel (www.cequinavfx.com)
+Created by Luciano Cequinel (www.cequinavfx.com).
 To report bugs or suggestions lucianocequinel@gmail.com
 
 
