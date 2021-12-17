@@ -17,4 +17,4 @@ You can find your .nuke folder at:
 
   Linux: /home/login name/.nuke
   macOS: /Users/login name/.nuke
-  Windows: drive letter:\Users\user_name\.nuke
+  Windows: drive letter:\Users\user_name\.nuke\
